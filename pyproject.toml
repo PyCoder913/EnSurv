@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ensurv"
+version = "0.1.0"
+description = "Generative survival modeling for right-censored time-to-event data"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "numpy>=1.26",
+    "pandas>=2.0",
+    "torch>=2.2",
+    "tqdm>=4.65",
+]
+classifiers = [
+    "Intended Audience :: Science/Research",
+    "Programming Language :: Python :: 3",
+    "Topic :: Scientific/Engineering :: Mathematics",
+]
+
+[project.optional-dependencies]
+workflow = [
+    "IPython>=8",
+    "lifelines>=0.30",
+    "matplotlib>=3.8",
+    "scikit-learn>=1.5",
+    "seaborn>=0.13",
+    "SurvivalEVAL==0.8.2",
+]
+docs = [
+    "Sphinx>=8.2,<10",
+    "pydata-sphinx-theme>=0.16.1,<0.17",
+    "sphinx-copybutton>=0.5.2,<0.6",
+    "sphinx-design>=0.6,<0.8",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["ensurv", "ensurv.*"]
+namespaces = false

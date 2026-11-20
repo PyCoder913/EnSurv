@@ -1,0 +1,16 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.venv*/
+.pytest_cache/
+.ipynb_checkpoints/
+.env
+.pypirc
+
+/docs/_build/
+data/
+support_cv_outputs/
+new_ensurv_cv_outputs/
+Ensurv_synthetic_simulation_results.csv

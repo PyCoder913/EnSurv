@@ -1,0 +1,7 @@
+include .readthedocs.yaml
+include RELEASE.md
+include docs/_templates/author-credit.html
+recursive-include docs *.py *.rst *.css *.png
+recursive-include examples *.ipynb
+recursive-include simulations *.ipynb
+prune docs/_build

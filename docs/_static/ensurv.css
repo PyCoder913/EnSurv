@@ -1,0 +1,128 @@
+html[data-theme="light"] {
+  --pst-color-primary: #126455;
+  --pst-color-secondary: #075375;
+  --ensurv-card-border: #cbded9;
+  --ensurv-card-tint: #f3faf7;
+}
+
+html[data-theme="dark"] {
+  --pst-color-primary: #82ead0;
+  --pst-color-secondary: #a6dcff;
+  --ensurv-card-border: #415a61;
+  --ensurv-card-tint: #202d35;
+}
+
+.navbar-brand .logo__title {
+  color: var(--pst-color-primary);
+  font-weight: 750;
+  letter-spacing: -0.04em;
+}
+
+.bd-main .bd-content .bd-article-container:has(.ensurv-hero) {
+  max-width: 74rem;
+}
+
+section:has(> .ensurv-hero) > h1 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+}
+
+.ensurv-hero.docutils.container {
+  display: grid;
+  grid-template-columns: minmax(0, 1.12fr) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(1.25rem, 3vw, 3rem);
+  margin: 0.8rem 0 1.1rem;
+  padding: clamp(1.4rem, 4vw, 3.3rem);
+  border: 1px solid #23515c;
+  border-radius: 1.35rem;
+  background:
+    radial-gradient(ellipse at 94% 3%, #14605575, transparent 58%),
+    linear-gradient(130deg, #101f34, #102d36);
+  color: #e0f5f1;
+}
+
+.ensurv-intro > p {
+  max-width: 36ch;
+  color: #d7e5ee;
+  line-height: 1.62;
+}
+
+.ensurv-kicker p {
+  margin: 0 0 0.9rem;
+  color: #8cffe0;
+  font-size: 0.73rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.ensurv-headline p {
+  margin: 0 0 1rem;
+  color: #f6fffc;
+  font-size: clamp(2.25rem, 4.45vw, 3.85rem);
+  font-weight: 790;
+  letter-spacing: -0.06em;
+  line-height: 1.03;
+  text-wrap: balance;
+}
+
+.ensurv-hero a.ensurv-cta {
+  margin: 0.55rem 0 0;
+  padding: 0.58rem 0.85rem;
+  border: 1px solid transparent;
+  border-radius: 0.55rem;
+  background: #abf7db;
+  color: #0e2d2a;
+  font-weight: 700;
+}
+
+.ensurv-hero a.ensurv-cta:hover,
+.ensurv-hero a.ensurv-cta:focus-visible {
+  background: #d3fcec;
+  color: #0e2d2a;
+}
+
+.ensurv-hero > figure {
+  min-width: 0;
+  margin: 0;
+  padding: clamp(0.6rem, 1.6vw, 1.05rem);
+  border: 1px solid #ffffff29;
+  border-radius: 0.9rem;
+  background: #071d2859;
+}
+
+.ensurv-hero > figure img {
+  width: 100%;
+  height: auto;
+  background: transparent;
+}
+
+.ensurv-hero > figure .caption-text {
+  color: #c7dce5;
+  font-size: 0.82rem;
+  font-style: normal;
+}
+
+.ensurv-install {
+  border-radius: 0.7rem;
+}
+
+.ensurv-guides .sd-card.sd-sphinx-override {
+  background: var(--ensurv-card-tint);
+  border: 1px solid var(--ensurv-card-border);
+  border-radius: 0.8rem;
+}
+
+.ensurv-guides .sd-card-title {
+  color: var(--pst-color-primary);
+}
+
+@media (max-width: 760px) {
+  .ensurv-hero.docutils.container {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
